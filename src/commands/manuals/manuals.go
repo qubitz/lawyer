@@ -3,7 +3,7 @@ package manuals
 // Manual represents the coupling of the one-line summary and detailed
 // explaination of a cli command or general Lawyer topic.
 type Manual struct {
-	Summary string
+	Description string
 	Content string
 }
 
@@ -29,8 +29,12 @@ var TopicManualMap = ManualMap{
 var EntireManualMap = merge(CommandManualMap, TopicManualMap)
 
 func merge(a, b ManualMap) ManualMap {
+	manMap := ManualMap{}
 	for key, value := range a {
-		b[key] = value
+		manMap[key] = value
+	}
+	for key, value := range b {
+		manMap[key] = value
 	}
 	return b
 }

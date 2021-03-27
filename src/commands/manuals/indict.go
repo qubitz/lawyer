@@ -1,7 +1,7 @@
 package manuals
 
 var indictManual Manual = Manual{
-	Summary: "verify files have the expected header",
+	Description: "verify files have the expected header",
 	Content: `Reads the top 10 lines (the header) of every file found matching
 <file_pattern> and compares them to the regular expression of
 "expected" inside the law file. Enter "lawyer help law" for more

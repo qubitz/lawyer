@@ -1,7 +1,7 @@
 package manuals
 
 var lawManual Manual = Manual{
-	Summary: "law file",
+	Description: "what is a law file",
 	Content: `The "Law File" is a YAML file that describes the possible values 
 of a file header. Here is an example Law File:
 
