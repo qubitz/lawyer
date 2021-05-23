@@ -23,6 +23,6 @@ func (setup helpSetup) Parse(args []string) Command {
 			subject: args[0],
 		}
 	default:
-		return suggestHelp(errors.New("too many arguments"))
+		return suggestHelpWith(errors.New("too many arguments"))
 	}
 }

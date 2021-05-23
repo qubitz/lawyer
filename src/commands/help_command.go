@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"./manuals"
+	"../constants"
 )
 
 type helpCommand struct {
@@ -21,7 +22,7 @@ func (help helpCommand) Execute() (err error) {
 }
 
 func printSummary() {
-	fmt.Println("Lawyer is a tool for maintaining copyright headers in source code.")
+	fmt.Println(constants.LawyerDescription)
 	fmt.Println()
 	printUsage()
 	fmt.Println()
@@ -40,20 +41,20 @@ func printCommands() {
 	fmt.Println("The commands are:")
 	fmt.Println()
 	for command, manual := range manuals.CommandManualMap {
-		fmt.Printf("\t%-10v   %v\n", command, manual.Summary)
+		fmt.Printf("\t%-10v   %v\n", command, manual.Description)
 	}
 	fmt.Println()
-	fmt.Println("Use \"go help <command>\" for more information about a command.")
+	fmt.Println("Use \"lawyer help <command>\" for more information about a command.")
 }
 
 func printTopics() {
 	fmt.Println("Additional help topics:")
 	fmt.Println()
 	for topic, manual := range manuals.TopicManualMap {
-		fmt.Printf("\t%-10v   %v\n", topic, manual.Summary)
+		fmt.Printf("\t%-10v   %v\n", topic, manual.Description)
 	}
 	fmt.Println()
-	fmt.Println("Use \"go help <topic>\" for more information about that topic.")
+	fmt.Println("Use \"lawyer help <topic>\" for more information about that topic.")
 }
 
 func printManual(command string) error {

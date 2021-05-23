@@ -22,7 +22,7 @@ func (setup indictSetup) Parse(args []string) Command {
 
 	paths := setup.flags.Args()
 	if len(paths) == 0 {
-		return suggestHelp(
+		return suggestHelpWith(
 			errors.New("defendant path(s) required for indictment"))
 	}
 
