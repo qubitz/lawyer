@@ -3,7 +3,7 @@ package commands
 import (
 	"fmt"
 
-	"../constants"
+	"github.com/qubitz/lawyer/constants"
 )
 
 // A Command executes a predefined procedure established before its creation.

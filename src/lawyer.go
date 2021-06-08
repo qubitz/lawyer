@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"os"
 
-	"./commands"
 	"github.com/TwinProduction/go-color"
+	"github.com/qubitz/lawyer/commands"
 )
 
 func main() {

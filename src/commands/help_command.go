@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 
-	"./manuals"
-	"../constants"
+	"github.com/qubitz/lawyer/commands/manuals"
+	"github.com/qubitz/lawyer/constants"
 )
 
 type helpCommand struct {

@@ -5,8 +5,8 @@ import (
 	"os"
 	"regexp"
 
-	"../laws"
-	"../trial"
+	"github.com/qubitz/lawyer/laws"
+	"github.com/qubitz/lawyer/trial"
 	"github.com/TwinProduction/go-color"
 )
 

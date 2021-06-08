@@ -15,7 +15,7 @@ func retrieveFromYaml(reader io.Reader) (Law, error) {
 	raw := new(yamlLaw)
 	decoder := yaml.NewDecoder(reader)
 	decoder.KnownFields(true)
-	
+
 	err := decoder.Decode(raw)
 	if err != nil {
 		return Law{}, err
