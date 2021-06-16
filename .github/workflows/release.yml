@@ -1,0 +1,28 @@
+name: Release
+
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      
+      - name: Setup Go env
+        uses: actions/setup-go@v1
+        
+      - name: Build Windows x64
+        run: go build $GITHUB_WORKSPACE/src/lawyer.go
+        env:
+          GOOS: windows
+          GOARCH: amd64
+          
+      - run: ls
+      
+#       - name: Push to chocolately
+#         uses: crazy-max/ghaction-chocolatey@v1
+#         with:
+#           args: push 
