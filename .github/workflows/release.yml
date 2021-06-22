@@ -10,18 +10,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      
-      - name: Setup Go env
+
+      - name: Setup Golang
         uses: actions/setup-go@v1
-        
-      - name: Build Windows x64
-        run: go build $GITHUB_WORKSPACE/src/lawyer.go
+
+      - name: Build
+        run: |
+          go get
+          go build
         env:
           GOOS: windows
           GOARCH: amd64
-          
-      - run: ls
-      
+
 #       - name: Push to chocolately
 #         uses: crazy-max/ghaction-chocolatey@v1
 #         with:
